@@ -4,13 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projects - Brand</title>
+    <title>Projects - Mootoo</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-
 
     <style>
         body {
@@ -152,31 +150,62 @@
         .hover-shadow:hover {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-        </style>
+    </style>
 
-        <script>
-            function openModal() {
-            document.getElementById("myModal").style.display = "block";
+    <script>
+            function openModal(n) {
+                document.getElementById("navbar-Home").style.display = "none";
+                if(n == "PetMatrix"){
+                    document.getElementById("Modal-PetMatrix").style.display = "block";
+                }
+                else if(n == "AIS"){
+                    document.getElementById("Modal-AIS").style.display = "block";
+                }
+                else if(n == "Chulalongkorn"){
+                    document.getElementById("Modal-Chulalongkorn").style.display = "block";
+                }
+                else if(n == "Chanwanich"){
+                    document.getElementById("Modal-Chanwanich").style.display = "block";
+                }
+                else{
+
+                }
             }
             
-            function closeModal() {
-            document.getElementById("myModal").style.display = "none";
+            function closeModal(n) {
+                document.getElementById("navbar-Home").style.display = "block";
+                if(n == "PetMatrix"){
+                    document.getElementById("Modal-PetMatrix").style.display = "none";
+                }
+                else if(n == "AIS"){
+                    document.getElementById("Modal-AIS").style.display = "none";
+                }
+                else if(n == "Chulalongkorn"){
+                    document.getElementById("Modal-Chulalongkorn").style.display = "none";
+                }
+                else if(n == "Chanwanich"){
+                    document.getElementById("Modal-Chanwanich").style.display = "none";
+                }
+                else{
+
+                }
             }
             
             var slideIndex = 1;
-            showSlides(slideIndex);
+            showSlidesPetMatrix(slideIndex);
             
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
+            
+            function plusSlidesPetMatrix(n) {
+                showSlidesPetMatrix(slideIndex += n);
             }
             
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
+            function currentSlidePetMatrix(n) {
+                showSlidesPetMatrix(slideIndex = n);
             }
             
-            function showSlides(n) {
+            function showSlidesPetMatrix(n) {
             var i;
-            var slides = document.getElementsByClassName("mySlides");
+            var slides = document.getElementsByClassName("mySlidesPetMatrix");
             var dots = document.getElementsByClassName("demo");
             var captionText = document.getElementById("caption");
             if (n > slides.length) {slideIndex = 1}
@@ -189,25 +218,117 @@
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
+            captionText.in
+            nerHTML = dots[slideIndex-1].alt;
             }
-        </script>
+
+
+            showSlidesAIS(slideIndex);
+
+            function plusSlidesAIS(n) {
+                showSlidesAIS(slideIndex += n);
+            }
+            
+            function currentSlideAIS(n) {
+                showSlidesAIS(slideIndex = n);
+            }
+            
+            function showSlidesAIS(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidesAIS");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.in
+            nerHTML = dots[slideIndex-1].alt;
+            }
+
+
+            showSlidesChulalongkorn(slideIndex);
+
+            function plusSlidesChulalongkorn(n) {
+                showSlidesChulalongkorn(slideIndex += n);
+            }
+            
+            function currentSlideChulalongkorn(n) {
+                showSlidesChulalongkorn(slideIndex = n);
+            }
+            
+            function showSlidesChulalongkorn(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidesChulalongkorn");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.in
+            nerHTML = dots[slideIndex-1].alt;
+            }
+
+
+            showSlidesChanwanich(slideIndex);
+
+            function plusSlidesChanwanich(n) {
+                showSlidesChanwanich(slideIndex += n);
+            }
+            
+            function currentSlideChanwanich(n) {
+                showSlidesChanwanich(slideIndex = n);
+            }
+            
+            function showSlidesChanwanich(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidesChanwanich");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.in
+            nerHTML = dots[slideIndex-1].alt;
+            }
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="hire-me.html">Hire me</a></li>
-                </ul>
+    <div class="row" id="navbar-Home">
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+            <div class="container"><a class="navbar-brand logo" href="#">Mootoo</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>-
+    </div>
     <main class="page projects-page">
         <section class="portfolio-block projects-cards">
             <div class="container">
@@ -216,50 +337,34 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image1.jpg" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image1.jpg" alt="Card Image" onclick="openModal('PetMatrix');currentSlidePetMatrix(1)"></a>
                             <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                <h6><a href="#">PetMatrix</a></h6>
+                                <p class="text-muted card-text">About Web application for an animal hospital.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image2.jpg" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image3.jpg" alt="Card Image" onclick="openModal('AIS');currentSlideAIS(1)"></a>
                             <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                <h6><a href="#">Web CallCenter</a></h6>
+                                <p class="text-muted card-text">Web application for call center AIS manage the top up.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image3.jpg" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image4.jpg" alt="Card Image" onclick="openModal('Chulalongkorn');currentSlideChulalongkorn(1)"></a>
                             <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                <h6><a href="#">CUFeeAllocate</a></h6>
+                                <p class="text-muted card-text">Web application for Scholarship management.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image4.jpg" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image5.jpg" alt="Card Image" onclick="openModal('Chanwanich');currentSlideChanwanich(1)"></a>
                             <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image5.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image6.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                <h6><a href="#">E-Visa</a></h6>
+                                <p class="text-muted card-text">Web application for Travels of tourists in the country.</p>
                             </div>
                         </div>
                     </div>
@@ -267,81 +372,218 @@
             </div>
         </section>
 
-        <h2 style="text-align:center">Lightbox</h2>
-        
-        <div class="row">
-          <div class="column">
-            <img src="assets/img/nature/image3.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-          </div>
-          <div class="column">
-            <img src="assets/img/nature/image4.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-          </div>
-          <div class="column">
-            <img src="assets/img/nature/image5.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-          </div>
-          <div class="column">
-            <img src="assets/img/nature/image6.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-          </div>
-        </div>
-        
-        <div id="myModal" class="modal">
-          <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <div id="Modal-PetMatrix" class="modal">
+          <span class="close cursor" onclick="closeModal('PetMatrix')">&times;</span>
           <div class="modal-content">
         
-            <div class="mySlides">
+            <div class="mySlidesPetMatrix">
               <div class="numbertext">1 / 4</div>
-              <img src="assets/img/nature/image3.jpg" style="width:100%">
+              <img src="assets/img/1_PetMatrix/PT_01.png" style="width:100%">
             </div>
         
-            <div class="mySlides">
+            <div class="mySlidesPetMatrix">
               <div class="numbertext">2 / 4</div>
-              <img src="assets/img/nature/image4.jpg" style="width:100%">
+              <img src="assets/img/1_PetMatrix/PT_02.png" style="width:100%">
             </div>
         
-            <div class="mySlides">
+            <div class="mySlidesPetMatrix">
               <div class="numbertext">3 / 4</div>
-              <img src="assets/img/nature/image5.jpg" style="width:100%">
+              <img src="assets/img/1_PetMatrix/PT_03.png" style="width:100%">
             </div>
             
-            <div class="mySlides">
+            <div class="mySlidesPetMatrix">
               <div class="numbertext">4 / 4</div>
-              <img src="assets/img/nature/image6.jpg" style="width:100%">
+              <img src="assets/img/1_PetMatrix/PT_04.png" style="width:100%">
             </div>
             
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlidesPetMatrix(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesPetMatrix(1)">&#10095;</a>
         
             <div class="caption-container">
               <p id="caption"></p>
             </div>
         
-        
-            <div class="column">
-              <img class="demo cursor" src="assets/img/nature/image3.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="assets/img/1_PetMatrix/PT_01.png" style="width:100%" onclick="currentSlidePetMatrix(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/img/1_PetMatrix/PT_02.png" style="width:100%" onclick="currentSlidePetMatrix(2)" alt="Snow">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/img/1_PetMatrix/PT_03.png" style="width:100%" onclick="currentSlidePetMatrix(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/img/1_PetMatrix/PT_04.png" style="width:100%" onclick="currentSlidePetMatrix(4)" alt="Northern Lights">
+                </div>
             </div>
-            <div class="column">
-              <img class="demo cursor" src="assets/img/nature/image4.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="assets/img/nature/image5.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="assets/img/nature/image6.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-            </div>
+            
           </div>
         </div>
+
+        <div id="Modal-AIS" class="modal">
+            <span class="close cursor" onclick="closeModal('AIS')">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlidesAIS">
+                <div class="numbertext">1 / 4</div>
+                <img src="assets/img/2_AIS/CC_01.png" style="width:100%">
+              </div>
+          
+              <div class="mySlidesAIS">
+                <div class="numbertext">2 / 4</div>
+                <img src="assets/img/2_AIS/CC_02.png" style="width:100%">
+              </div>
+          
+              <div class="mySlidesAIS">
+                <div class="numbertext">3 / 4</div>
+                <img src="assets/img/2_AIS/CC_03.png" style="width:100%">
+              </div>
+              
+              <div class="mySlidesAIS">
+                <div class="numbertext">4 / 4</div>
+                <img src="assets/img/2_AIS/CC_04.png" style="width:100%">
+              </div>
+              
+              <a class="prev" onclick="plusSlidesAIS(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlidesAIS(1)">&#10095;</a>
+          
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <div class="row">
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/2_AIS/CC_01.png" style="width:100%" onclick="currentSlideAIS(1)" alt="Nature and sunrise">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/2_AIS/CC_02.png" style="width:100%" onclick="currentSlideAIS(2)" alt="Snow">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/2_AIS/CC_03.png" style="width:100%" onclick="currentSlideAIS(3)" alt="Mountains and fjords">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/2_AIS/CC_04.png" style="width:100%" onclick="currentSlideAIS(4)" alt="Northern Lights">
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+
+
+        <div id="Modal-Chulalongkorn" class="modal">
+            <span class="close cursor" onclick="closeModal('Chulalongkorn')">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlidesChulalongkorn">
+                <div class="numbertext">1 / 4</div>
+                <img src="assets/img/3_Chulalongkorn/CU_01.png" style="width:100%">
+              </div>
+          
+              <div class="mySlidesChulalongkorn">
+                <div class="numbertext">2 / 4</div>
+                <img src="assets/img/3_Chulalongkorn/CU_02.png" style="width:100%">
+              </div>
+          
+              <div class="mySlidesChulalongkorn">
+                <div class="numbertext">3 / 4</div>
+                <img src="assets/img/3_Chulalongkorn/CU_03.png" style="width:100%">
+              </div>
+              
+              <div class="mySlidesChulalongkorn">
+                <div class="numbertext">4 / 4</div>
+                <img src="assets/img/3_Chulalongkorn/CU_04.png" style="width:100%">
+              </div>
+              
+              <a class="prev" onclick="plusSlidesChulalongkorn(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlidesChulalongkorn(1)">&#10095;</a>
+          
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <div class="row">
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/3_Chulalongkorn/CU_01.png" style="width:100%" onclick="currentSlideChulalongkorn(1)" alt="Nature and sunrise">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/3_Chulalongkorn/CU_02.png" style="width:100%" onclick="currentSlideChulalongkorn(2)" alt="Snow">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/3_Chulalongkorn/CU_03.png" style="width:100%" onclick="currentSlideChulalongkorn(3)" alt="Mountains and fjords">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/3_Chulalongkorn/CU_04.png" style="width:100%" onclick="currentSlideChulalongkorn(4)" alt="Northern Lights">
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+
+        
+
+        <div id="Modal-Chanwanich" class="modal">
+            <span class="close cursor" onclick="closeModal('Chanwanich')">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlidesChanwanich">
+                <div class="numbertext">1 / 4</div>
+                <img src="assets/img/4_Chanwanich/CH_01.png" style="width:100%">
+              </div>
+          
+              <div class="mySlidesChanwanich">
+                <div class="numbertext">2 / 4</div>
+                <img src="assets/img/4_Chanwanich/CH_02.png" style="width:100%">
+              </div>
+          
+              <div class="mySlidesChanwanich">
+                <div class="numbertext">3 / 4</div>
+                <img src="assets/img/4_Chanwanich/CH_03.png" style="width:100%">
+              </div>
+              
+              <div class="mySlidesChanwanich">
+                <div class="numbertext">4 / 4</div>
+                <img src="assets/img/4_Chanwanich/CH_04.png" style="width:100%">
+              </div>
+              
+              <a class="prev" onclick="plusSlidesChanwanich(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlidesChanwanich(1)">&#10095;</a>
+          
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <div class="row">
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/4_Chanwanich/CH_01.png" style="width:100%" onclick="currentSlideChanwanich(1)" alt="Nature and sunrise">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/4_Chanwanich/CH_02.png" style="width:100%" onclick="currentSlideChanwanich(2)" alt="Snow">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/4_Chanwanich/CH_03.png" style="width:100%" onclick="currentSlideChanwanich(3)" alt="Mountains and fjords">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="assets/img/4_Chanwanich/CH_04.png" style="width:100%" onclick="currentSlideChanwanich(4)" alt="Northern Lights">
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+
+        
     </main>
     <footer class="page-footer">
         <div class="container">
-            <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
-            <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
+            <div class="links"><a href="#">Mootoo Unbox</a></div>
+            <div class="social-icons"><a href="https://www.facebook.com/mootooun" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://www.instagram.com/mootoounblock/" target="_blank"><i class="icon ion-social-instagram-outline"></i></a></div>
         </div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
     <script src="assets/js/theme.js"></script>
- 
 </body>
 
 </html>
